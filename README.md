@@ -1,3 +1,1 @@
 # landingPage
-
-https://deuro.com/

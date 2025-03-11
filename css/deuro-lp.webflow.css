@@ -4,10 +4,11 @@
   --frankencoin-pay---gray--30: #ced1da;
   --frankencoin-pay---brand-colors--anthracite: #272b38;
   --frankencoin-pay---brand-colors--swiss-blue: #0f80f0;
+  --frankencoin-pay---5: #f7f7f9;
+  --frankencoin-pay---neutrals--neutral-400: #b7bfd1;
   --frankencoin-pay---white: white;
   --frankencoin-pay---black: black;
   --frankencoin-pay---button-corner-radius: 4px;
-  --frankencoin-pay---5: #f7f7f9;
   --frankencoin-pay---10: #eff0f3;
   --frankencoin-pay---blue-pallet--blue-50: #0f80f0;
   --frankencoin-pay---brand-colors--white: white;
@@ -83,13 +84,31 @@
   --frankencoin-pay---neutrals--neutral-770: #1a2536;
   --frankencoin-pay---neutrals--neutral-700: #1f2a3d;
   --frankencoin-pay---neutrals--neutral-600: #475569;
-  --frankencoin-pay---neutrals--neutral-400: #b7bfd1;
   --frankencoin-pay---neutrals--neutral-675: #283243;
   --frankencoin-pay---neutrals--neutral-900: #020617;
   --frankencoin-pay---paddings--xs: 4px;
   --frankencoin-pay---paddings--l: 16px;
   --frankencoin-pay---paddings--snudge: 6px;
   --frankencoin-pay---paddings--s: 8px;
+}
+
+.w-layout-blockcontainer {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+@media screen and (max-width: 991px) {
+  .w-layout-blockcontainer {
+    max-width: 728px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .w-layout-blockcontainer {
+    max-width: none;
+  }
 }
 
 .header {
@@ -152,7 +171,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 750px;
+  height: 100%;
   text-decoration: none;
   display: flex;
   position: relative;
@@ -191,6 +210,7 @@
   min-width: 600px;
   max-width: 100%;
   height: 750px;
+  padding-top: 40px;
   padding-left: 120px;
   text-decoration: none;
   display: flex;
@@ -375,8 +395,9 @@
   width: 100%;
   min-width: 600px;
   max-width: 100%;
-  height: 440px;
-  margin-top: 20px;
+  height: auto;
+  margin-top: 0;
+  margin-bottom: 0;
   transition-property: opacity;
   transition-duration: .2s;
   transition-timing-function: ease;
@@ -570,11 +591,141 @@
   transform: scale(1.1);
 }
 
+.countdown_section {
+  grid-column-gap: 10px;
+  background-color: #092f62;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: none;
+  height: 120px;
+  padding: 1px 120px;
+  text-decoration: none;
+  display: flex;
+  overflow: hidden;
+}
+
+.container {
+  grid-column-gap: 48px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+}
+
+.we-are-launching-soon {
+  color: #fff;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.rocket {
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Satoshi Variable, sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 88px;
+  text-decoration: none;
+}
+
+.we-are-launching-soon-0 {
+  color: #fff;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Satoshi Variable, sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.we-are-launching-soon-1 {
+  color: #fff;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Satoshi Variable, sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.js-clock {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.box {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: auto;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 20px;
+  display: flex;
+}
+
+.clock-number {
+  color: var(--frankencoin-pay---5);
+  font-family: Satoshi Variable, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+.clock-label {
+  color: var(--frankencoin-pay---neutrals--neutral-400);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-right: -5px;
+  font-family: Satoshi Variable, sans-serif;
+}
+
+.div-block-2 {
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
+  align-items: center;
+  display: flex;
+}
+
+.hero-cont {
+  background-color: #f5f6f9;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 991px) {
   .hero {
     justify-content: center;
     align-items: flex-start;
-    height: 700px;
+    height: 100%;
   }
 
   .text-left {
@@ -600,7 +751,7 @@
   }
 
   .newsletter-abo {
-    padding-top: 36px;
+    padding-top: 60px;
   }
 
   .text {
@@ -618,7 +769,38 @@
   }
 
   .tg_links {
-    padding-top: 36px;
+    padding-top: 60px;
+  }
+
+  .countdown_section {
+    grid-column-gap: 0px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 20px;
+  }
+
+  .container {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .js-clock {
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+  }
+
+  .box {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+
+  .hero-cont {
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 800px;
   }
 }
 
@@ -663,6 +845,7 @@
   }
 
   .hero {
+    flex-flow: row;
     justify-content: flex-start;
     align-items: flex-start;
     height: 640px;
@@ -690,7 +873,7 @@
   .newsletter-abo {
     grid-row-gap: 28px;
     height: auto;
-    padding-top: 46px;
+    padding-top: 60px;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -754,7 +937,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     height: 500px;
-    padding-top: 42px;
+    padding-top: 60px;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -769,6 +952,66 @@
 
   .vectors-wrapper-76:hover {
     transform: none;
+  }
+
+  .countdown_section {
+    grid-column-gap: 0px;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .container {
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    flex-flow: column;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: auto;
+    display: flex;
+  }
+
+  .we-are-launching-soon {
+    font-size: 16px;
+  }
+
+  .rocket {
+    object-fit: fill;
+    line-height: 100%;
+  }
+
+  .we-are-launching-soon-0 {
+    font-size: 16px;
+  }
+
+  .js-clock {
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .box {
+    width: 50px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+
+  .div-block-2 {
+    height: auto;
+  }
+
+  .hero-cont {
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
   }
 }
 

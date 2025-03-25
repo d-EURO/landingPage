@@ -342,7 +342,7 @@
   align-items: center;
   min-width: 150px;
   height: 36px;
-  padding: 8px 16px;
+  padding: 8px 12px;
   text-decoration: none;
   transition: background-color .2s;
   display: flex;
@@ -781,11 +781,11 @@
 
 .section.core-features.is-association {
   margin-bottom: 0;
-  padding-top: 96px;
+  padding-top: 9rem;
 }
 
 .section.core-features.is-association.is-last {
-  margin-bottom: 144px;
+  margin-bottom: 9rem;
 }
 
 .section.chain-bridges {
@@ -815,7 +815,6 @@
 
 .section.deps {
   background-color: var(--frankencoin-pay---5);
-  margin-bottom: 128px;
 }
 
 .section.features {
@@ -859,6 +858,10 @@
 .section.savings {
   background-color: var(--frankencoin-pay---5);
   margin-bottom: 0;
+}
+
+.section.bottom-40 {
+  margin-bottom: 40px;
 }
 
 .title {
@@ -970,12 +973,16 @@
   color: var(--frankencoin-pay---gray--30);
   font-size: var(--frankencoin-pay---font-size--subtitle-desktop);
   letter-spacing: .04em;
-  text-transform: none;
+  text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 400;
   line-height: 21px;
   text-decoration: none;
+}
+
+.paragraph.non-caps {
+  text-transform: none;
 }
 
 .value {
@@ -1175,6 +1182,12 @@
 
 .body-xl.dark-box {
   color: var(--gray-palette--70);
+}
+
+.body-xl.subtitle {
+  text-align: center;
+  width: auto;
+  max-width: 75ch;
 }
 
 .body-m-bold {
@@ -1458,6 +1471,10 @@
   display: flex;
 }
 
+.token-card.ndeps {
+  max-width: 383px;
+}
+
 .toket-fiat-block {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
@@ -1614,6 +1631,11 @@
   width: 100%;
   height: auto;
   display: grid;
+}
+
+.token-list.ndeps {
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
 }
 
 .sm-stronger {
@@ -1824,14 +1846,18 @@
   grid-row-gap: 8px;
   background-image: url('../images/Vector-Compressify.io.webp');
   background-position: 0 0;
+  background-repeat: no-repeat;
   background-size: cover;
-  flex-direction: column;
+  flex-flow: column;
+  flex: 0 auto;
   justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 800px;
   height: 100%;
-  max-height: 200px;
+  max-height: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-decoration: none;
   display: flex;
 }
@@ -3407,16 +3433,19 @@
 .team-grid {
   grid-column-gap: 32px;
   grid-row-gap: 32px;
+  flex-flow: wrap;
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
-  display: grid;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
 }
 
 .team-grid.is-flex {
   flex-flow: wrap;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   display: flex;
 }
@@ -3519,7 +3548,7 @@
   font-family: var(--body-l-light);
   color: #fff;
   margin-bottom: 0;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.25;
 }
 
@@ -3584,6 +3613,11 @@
 .hero-subtx.center {
   color: var(--frankencoin-pay---brand-colors--deep-blue);
   text-align: center;
+}
+
+.hero-subtx.center.fade-in-600ms, .hero-subtx.center.fade-in-800ms {
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .image-24 {
@@ -5205,6 +5239,11 @@
     padding-left: 0;
   }
 
+  .team-text {
+    font-size: 16px;
+    font-weight: 300;
+  }
+
   .body-m-light {
     color: var(--frankencoin-pay---gray--60);
   }
@@ -5424,7 +5463,8 @@
   }
 
   .hero.homepage {
-    height: 105vh;
+    height: auto;
+    padding-top: 44px;
   }
 
   .grid-4 {
@@ -5437,10 +5477,14 @@
 
   .section.heroimg {
     background-image: none;
-    background-position: 0 0;
     background-repeat: repeat;
     background-size: auto;
     background-attachment: scroll;
+    margin-bottom: 40px;
+  }
+
+  .section.stats-section {
+    margin-top: 0;
   }
 
   .section.core-features {
@@ -5451,7 +5495,7 @@
   }
 
   .section.token-classsification {
-    height: 450px;
+    height: auto;
   }
 
   .section.brand-assets {
@@ -5467,6 +5511,7 @@
   }
 
   .stats-list-l {
+    grid-row-gap: 1px;
     flex-flow: column;
     width: 100%;
     max-width: 500px;
@@ -5490,6 +5535,17 @@
     grid-template-columns: 1fr 1fr;
     grid-auto-columns: 1fr;
     display: flex;
+  }
+
+  .body-xl {
+    text-align: left;
+    flex: 0 auto;
+    align-self: flex-start;
+  }
+
+  .body-xl.subtitle {
+    width: auto;
+    max-width: none;
   }
 
   .token-list {
@@ -5622,6 +5678,7 @@
   }
 
   .stats-list-m.frankencoin-pool-share {
+    grid-row-gap: 1px;
     max-width: 500px;
   }
 
@@ -5639,6 +5696,11 @@
   .text-95 {
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  .body-3.token-classification {
+    flex: 0 auto;
+    align-self: flex-start;
   }
 
   .graphic-2 {
@@ -5684,6 +5746,11 @@
 
   .display-ps {
     text-align: center;
+  }
+
+  .hero-subtx.center.fade-in-600ms {
+    justify-content: flex-start;
+    align-items: center;
   }
 
   .hero-lending {
@@ -5791,7 +5858,11 @@
 
   .footer-layout_left {
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+  }
+
+  .footer-layout_right {
+    place-items: start;
   }
 
   .hero-news {
@@ -6443,7 +6514,7 @@
 
   .section-headline {
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 0;
   }
 
@@ -7198,11 +7269,11 @@
   .footer-layout_left-bottom {
     flex-flow: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .footer-text {
-    text-align: center;
+    text-align: left;
   }
 
   .hero-news {
@@ -7501,14 +7572,6 @@
   grid-area: span 1 / span 2 / span 1 / span 2;
 }
 
-#w-node-_445594fd-8beb-1414-f320-b57287389677-8ccf9845 {
-  grid-area: span 1 / span 1 / span 1 / span 1;
-}
-
-#w-node-_445594fd-8beb-1414-f320-b57287389679-8ccf9845 {
-  grid-area: span 1 / span 2 / span 1 / span 2;
-}
-
 #w-node-_445594fd-8beb-1414-f320-b57287389685-8ccf9845 {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
@@ -7517,11 +7580,11 @@
   grid-area: span 1 / span 2 / span 1 / span 2;
 }
 
-#w-node-_445594fd-8beb-1414-f320-b5728738971f-8ccf9845 {
+#w-node-_445594fd-8beb-1414-f320-b57287389677-8ccf9845 {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
 
-#w-node-_445594fd-8beb-1414-f320-b57287389721-8ccf9845 {
+#w-node-_445594fd-8beb-1414-f320-b57287389679-8ccf9845 {
   grid-area: span 1 / span 2 / span 1 / span 2;
 }
 
@@ -7535,7 +7598,7 @@
 
 @media screen and (max-width: 991px) {
   #w-node-e5fe89d0-32cb-c548-6c91-a27043573407-6c5ce37f {
-    justify-self: center;
+    justify-self: start;
   }
 }
 

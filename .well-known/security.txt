@@ -1,0 +1,15 @@
+# In case of security incidents please contact the dEURO Association
+Contact: mailto: info@deuro.com
+
+
+# For vulnerability reports please contact the Compass Security Bug Bounty Team
+Contact: https://bugbounty.compass-security.com/bug-bounties/deuro-bug-bounty
+Policy: https://bugbounty.compass-security.com/bug-bounties/deuro-bug-bounty
+
+
+Expires: 2028-12-20T00:00:00.000Z
+Preferred-Languages: en, de
+
+
+# Note
+It was decided to allow integration of dEURO into external pages to support decentralization and cross-domain embedding. While aware of potential security risks (e.g., clickjacking), this model was chosen deliberately. Users are responsible for verifying transaction data, especially with non-open-source integrations.

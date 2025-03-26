@@ -1086,7 +1086,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
   justify-content: center;
-  place-items: center;
+  place-items: start center;
   width: 100%;
   height: auto;
   display: grid;
@@ -1129,8 +1129,10 @@
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  height: 440px;
-  padding: 36px;
+  height: auto;
+  min-height: 440px;
+  margin-bottom: 0;
+  padding: 36px 36px 48px;
   text-decoration: none;
   transition: all .2s;
   display: flex;
@@ -5759,8 +5761,8 @@
     justify-content: center;
     align-items: center;
     height: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-top: 60px;
+    padding: 20px;
   }
 
   .hero-lending.herotitle {
@@ -6229,6 +6231,8 @@
   .container._64-sparsing {
     grid-column-gap: 32px;
     grid-row-gap: 32px;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .container.association {
@@ -6476,7 +6480,7 @@
     line-height: var(--frankencoin-pay---line-height--body-1-mobile);
   }
 
-  .body-xl.text-align-center {
+  .body-xl.text-align-center, .body-xl.subtitle {
     text-align: left;
   }
 
@@ -6484,6 +6488,11 @@
     font-family: var(--frankencoin-pay---font--body-3-stronger-mobile);
     font-size: var(--frankencoin-pay---font-size--body-3-stronger-mobile);
     line-height: var(--frankencoin-pay---line-height--body-3-stronger-mobile);
+  }
+
+  .text-80 {
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .line-2 {
@@ -6514,7 +6523,7 @@
 
   .section-headline {
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 0;
   }
 

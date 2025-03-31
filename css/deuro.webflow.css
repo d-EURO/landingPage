@@ -56,6 +56,7 @@
   --frankencoin-pay---font--body-3-mobile: "Avenir Book 400", sans-serif;
   --frankencoin-pay---font-size--body-3-mobile: 16px;
   --frankencoin-pay---line-height--body-3-mobile: 20px;
+  --gray-palette--5: #f5f6f9;
   --frankencoin-pay---gray--20: #dfe0e6;
   --frankencoin-pay---font--xs: "Avenir Book 400", sans-serif;
   --frankencoin-pay---font-size--xs: 12px;
@@ -85,7 +86,6 @@
   --gray-palette--80: #4f566e;
   --spacing--10: 40px;
   --spacing--30: 120px;
-  --gray-palette--5: #f5f6f9;
   --brand-colors--titan-gray: #5d647b;
   --body-m-bold: "Avenir Heavy 900", sans-serif;
   --brand-colors--swiss-blue: #0f80f0;
@@ -1403,6 +1403,7 @@
 }
 
 .vectors-wrapper-199 {
+  background-color: var(--gray-palette--5);
   object-fit: cover;
   flex: 0 auto;
   justify-content: center;
@@ -1761,6 +1762,9 @@
 
 .logo_04.scale-transform {
   text-align: right;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 70%;
   height: auto;
   transition: transform .2s;
 }
@@ -1770,7 +1774,7 @@
 }
 
 .grid-5 {
-  grid-column-gap: 60px;
+  grid-column-gap: 20px;
   grid-row-gap: 40px;
   text-align: center;
   grid-template-rows: auto;
@@ -1785,10 +1789,15 @@
   margin-left: auto;
   margin-right: auto;
   padding-top: 0;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .link-block-4 {
+  justify-content: center;
+  align-items: center;
   width: auto;
+  display: flex;
 }
 
 .div-block-18 {
@@ -3275,12 +3284,22 @@
 
 .logo_02.scale-transform {
   text-align: right;
-  height: 65px;
+  justify-content: center;
+  align-items: center;
+  max-width: none;
+  height: 60px;
   transition: transform .2s;
 }
 
 .logo_02.scale-transform:hover {
   transform: scale(1.1);
+}
+
+.link-block-13 {
+  justify-content: center;
+  align-items: center;
+  max-width: none;
+  display: flex;
 }
 
 .container-10 {
@@ -5777,6 +5796,10 @@
     max-width: 500px;
   }
 
+  .logo_02.scale-transform {
+    height: 58px;
+  }
+
   .container-10 {
     grid-column-gap: 32px;
     grid-row-gap: 32px;
@@ -6663,8 +6686,9 @@
   }
 
   .logo_dfx.scale-transform {
-    max-width: 50%;
+    max-width: none;
     height: auto;
+    max-height: 40px;
   }
 
   .ecosystem-logo-block {
@@ -6673,7 +6697,7 @@
     max-height: none;
     margin-bottom: 0;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 46px;
   }
 
   .headline-35 {
@@ -6689,13 +6713,13 @@
   }
 
   .logo_04.scale-transform {
-    max-width: 90%;
+    max-width: 70%;
     height: 100%;
   }
 
   .grid-5 {
     grid-column-gap: 0px;
-    grid-row-gap: 36px;
+    grid-row-gap: 32px;
     order: 0;
     grid-template-rows: auto auto auto auto auto auto;
     grid-template-columns: 1fr;
@@ -7008,7 +7032,7 @@
   }
 
   .logo_03.scale-transform {
-    max-width: 90%;
+    max-width: 88%;
     height: 100%;
   }
 
@@ -7036,7 +7060,12 @@
   }
 
   .logo_02.scale-transform {
+    justify-content: flex-start;
+    align-items: center;
+    max-width: none;
     height: auto;
+    max-height: 60px;
+    display: block;
   }
 
   .link-block-11 {
@@ -7656,6 +7685,10 @@
   .spotlight_cards-wrapper {
     grid-column-gap: 44px;
     grid-row-gap: 44px;
+  }
+
+  .link-block-17 {
+    margin-top: -6px;
   }
 }
 

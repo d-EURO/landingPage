@@ -929,7 +929,7 @@
 .stats-list-l {
   grid-column-gap: 1px;
   border-radius: 12px;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: 100%;
   max-width: 1200px;
@@ -1011,7 +1011,7 @@
   text-decoration: none;
 }
 
-.big-number-2 {
+.currency {
   font-family: var(--frankencoin-pay---font--title-3-desktop);
   color: var(--frankencoin-pay---white);
   font-size: var(--frankencoin-pay---font-size--title-3-desktop);
@@ -1409,6 +1409,10 @@
   justify-content: center;
   align-items: center;
   height: 1px;
+  margin-top: 0;
+  margin-bottom: auto;
+  padding-top: 0;
+  padding-bottom: 0;
   text-decoration: none;
   display: flex;
 }
@@ -2555,13 +2559,13 @@
   grid-column-gap: 20px;
   grid-row-gap: 16px;
   flex-wrap: wrap;
-  grid-template-rows: auto auto;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  max-width: 900px;
+  max-width: 1200px;
   height: auto;
   text-decoration: none;
   display: grid;
@@ -4984,7 +4988,7 @@
 }
 
 .bottom-v2 {
-  grid-row-gap: 16px;
+  grid-row-gap: 24px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -5141,6 +5145,24 @@
   max-height: 30px;
 }
 
+.currency-euro {
+  font-family: var(--frankencoin-pay---font--title-3-desktop);
+  color: var(--frankencoin-pay---white);
+  font-size: var(--frankencoin-pay---font-size--title-1-desktop);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 900;
+  line-height: 36px;
+  text-decoration: none;
+}
+
+.textlink {
+  color: var(--brand-colors--deep-blue);
+  text-underline-offset: .15em;
+  text-decoration-thickness: .05em;
+}
+
 @media screen and (min-width: 1440px) {
   .nav-left {
     width: 50%;
@@ -5219,7 +5241,7 @@
   }
 
   .section.stats_bar_deps {
-    margin-top: -204px;
+    margin-top: -220px;
   }
 
   .section.lending {

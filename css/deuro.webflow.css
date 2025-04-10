@@ -94,6 +94,7 @@
   --brand-colors--deep-blue: #092f62;
   --gray-palette--75: #5d647b;
   --gray-palette--85: #43495d;
+  --brand-colors--glacier-white: #f5f6f9;
   --frankencoin-pay---black: black;
   --frankencoin-pay---button-corner-radius: 4px;
   --body-m: 16px;
@@ -165,7 +166,6 @@
   --frankencoin-pay---neutrals--neutral-900: #020617;
   --status-colors--red-400: #f98080;
   --frankencoin-pay---paddings--xs: 4px;
-  --brand-colors--glacier-white: #f5f6f9;
   --frankencoin-pay---paddings--l: 16px;
   --frankencoin-pay---paddings--snudge: 6px;
   --frankencoin-pay---paddings--s: 8px;
@@ -5163,6 +5163,139 @@
   text-decoration-thickness: .05em;
 }
 
+.wg-element.hide-desktop {
+  display: none;
+}
+
+.wg-icon {
+  color: var(--brand-colors--anthracite);
+  -webkit-text-stroke-color: var(--brand-colors--anthracite);
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  display: flex;
+}
+
+.wg-icon:hover {
+  color: var(--blue-palette--blue-50);
+}
+
+.wg-dropdown-toggle {
+  color: var(--frankencoin-pay---brand-colors--anthracite);
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+
+.wg-dropdown-toggle:hover {
+  color: var(--brand-colors--swiss-blue);
+}
+
+.wg-dropdown {
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+  background-color: #fff;
+  border: 1px solid #eff0f3;
+  border-radius: .5rem;
+  flex-flow: column;
+  margin-top: 4px;
+  padding: 1.5rem;
+  display: none;
+  inset: 2.125rem -1rem auto auto;
+}
+
+.wg-dropdown.w--open {
+  grid-column-gap: 2.7rem;
+  grid-row-gap: 2.7rem;
+  margin-top: 0;
+  padding: 1.5rem;
+  inset: 2.3rem -1rem auto auto;
+}
+
+.weglot-switcher {
+  grid-column-gap: .5rem;
+  grid-row-gap: .5rem;
+  padding-right: 2rem;
+  display: flex;
+}
+
+.switcher_link {
+  color: var(--frankencoin-pay---brand-colorccs--titan-gray);
+  text-transform: uppercase;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  font-family: "Avenir Roman 400", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: none;
+  position: relative;
+}
+
+.switcher_link:hover {
+  background-color: var(--brand-colors--glacier-white);
+}
+
+.switcher_link.w--current {
+  background-color: var(--brand-colors--glacier-white);
+  color: var(--brand-colors--anthracite);
+  font-family: "Avenir Black 900", sans-serif;
+  font-weight: 900;
+}
+
+.language {
+  font-family: "Avenir Heavy 900", sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+.wg-selector-fill.f1, .wg-selector-fill.f2 {
+  background-color: #f0f1f5;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0% auto auto 0%;
+}
+
+.switcher_text {
+  position: relative;
+}
+
+.wg-selector-text-lang2 {
+  color: var(--frankencoin-pay---brand-colors--titan-gray);
+  font-family: "Avenir Medium 500", sans-serif;
+  font-weight: 500;
+  position: relative;
+}
+
+.code-embed {
+  display: none;
+}
+
+.wg-wrapper {
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  flex-flow: column;
+  display: flex;
+}
+
+.wg-dropdown_arrow {
+  background-color: var(--frankencoin-pay---white);
+  border-top: 1px solid #eff0f3;
+  border-left: 1px solid #eff0f3;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  inset: -4px 1.5rem auto auto;
+  transform: rotate(45deg);
+}
+
+.code-embed-2 {
+  display: none;
+}
+
 @media screen and (min-width: 1440px) {
   .nav-left {
     width: 50%;
@@ -5535,6 +5668,10 @@
 }
 
 @media screen and (max-width: 991px) {
+  .nav-wrapper {
+    position: relative;
+  }
+
   .icon {
     color: #272b38;
   }
@@ -5567,7 +5704,8 @@
     flex-flow: column;
     flex: none;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     padding: 32px 3% 16px;
     display: flex;
   }
@@ -6143,6 +6281,27 @@
     justify-content: center;
     align-items: center;
   }
+
+  .wg-element {
+    flex-flow: column;
+    padding-left: .5rem;
+  }
+
+  .wg-element.hide-tablet {
+    display: none;
+  }
+
+  .wg-element.hide-desktop {
+    display: inline-block;
+  }
+
+  .wg-dropdown.w--open {
+    inset: 3rem 0% auto auto;
+  }
+
+  .wg-dropdown_arrow {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -6388,6 +6547,7 @@
 
   .btn_launch_app.mobile {
     text-align: left;
+    white-space: nowrap;
     object-fit: fill;
     order: 0;
     align-self: auto;
@@ -7759,6 +7919,28 @@
 
   .link-block-17 {
     margin-top: -6px;
+  }
+
+  .wg-element {
+    padding-right: .5rem;
+  }
+
+  .wg-element.hide-desktop {
+    padding-left: 0;
+  }
+
+  .wg-dropdown.w--open {
+    top: 2.5rem;
+  }
+
+  .weglot-switcher {
+    padding-right: 0;
+  }
+
+  .nav-btn-wg-wrapper {
+    justify-content: space-between;
+    display: flex;
+    position: relative;
   }
 }
 

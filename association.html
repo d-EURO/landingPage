@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Wed Apr 09 2025 12:51:50 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Thu Apr 10 2025 10:24:35 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="67c9c3684922bcc88ccf9845" data-wf-site="66f821decbc5c641c7050485">
 <head>
   <meta charset="utf-8">
@@ -25,6 +25,12 @@ Weglot.initialize({
 api_key: 'wg_b90707b33408651111250731dd46d8bc9'
 });
 </script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.weglot.com/weglot.min.css?v=9">
+  <style id="weglot-custom-style" type="text/css">
+.weglot-container {
+display: none!important;
+}
+</style>
 </head>
 <body>
   <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
@@ -111,6 +117,63 @@ api_key: 'wg_b90707b33408651111250731dd46d8bc9'
           <div class="menu-button-2 w-nav-button">
             <div class="icon w-icon-nav-menu"></div>
           </div>
+        </div>
+        <div data-hover="false" data-delay="0" class="wg-element w-dropdown">
+          <div class="wg-dropdown-toggle w-dropdown-toggle">
+            <div class="wg-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewbox="0 0 25 25">
+                <style>
+    .st0-globe {
+      stroke: currentColor;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+                <g style="clip-path:url(#clip0_2920_18870)">
+                  <path d="M2.836 12.035c0 5.523 4.477 10 10 10s10-4.477 10-10-4.477-10-10-10-10 4.477-10 10" class="st0-globe"></path>
+                  <path d="M13.835 2.086s3 3.95 3 9.95-3 9.95-3 9.95m-2 0s-3-3.95-3-9.95 3-9.95 3-9.95m-8.37 13.45h18.74m-18.74-7h18.74" class="st0-globe"></path>
+                </g>
+                <defs>
+                  <clippath id="clip0_2920_18870">
+                    <path fill="#000000" d="M.836.035h26v26h-26z"></path>
+                  </clippath>
+                </defs>
+              </svg></div>
+          </div>
+          <nav class="wg-dropdown w-dropdown-list">
+            <div class="wg-wrapper">
+              <div class="language">Language</div>
+              <div class="weglot-switcher-component">
+                <div class="weglot-switcher">
+                  <a lang="en" href="#" class="switcher_link w-inline-block">
+                    <div class="switcher_text">en</div>
+                  </a>
+                  <a lang="de" href="#" class="switcher_link w-inline-block">
+                    <div class="switcher_text">de</div>
+                  </a>
+                </div>
+              </div>
+              <div class="wg-dropdown_arrow"></div>
+            </div>
+          </nav>
+        </div>
+        <div class="code-embed-2 w-embed w-script">
+          <script>
+// Close dropdown
+var Webflow = Webflow || [];
+Webflow.push(function () {
+  $(document).ready(function() {
+    $('.switcher_link').on('click', function () {
+      $(".w-dropdown").trigger("w-close");
+    });
+    $(document).on('keydown', function (e) {
+      if (e.key === 'Escape') {
+        $(".w-dropdown").trigger("w-close");
+      }
+    });
+  });
+});
+</script>
         </div>
       </div>
     </div>

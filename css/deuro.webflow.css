@@ -1277,6 +1277,7 @@
 
 .body-xl.text-color-white {
   color: var(--frankencoin-pay---brand-colors--white);
+  text-align: center;
 }
 
 .body-xl.text-align-center {

@@ -40,7 +40,7 @@ display: none!important;
   document.addEventListener("DOMContentLoaded", function () {
     async function getData() {
       try {
-        let response = await fetch("https://dev.api.dfx.swiss/v1/deuro/info");
+        let response = await fetch("https://api.dfx.swiss/v1/deuro/info");
         if (!response.ok) throw new Error("Failed to fetch quote");
         return response.json();
       } catch (error) {

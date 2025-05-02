@@ -36,11 +36,13 @@ api_key: 'wg_b90707b33408651111250731dd46d8bc9'
 display: none!important;
 }
 </style>
-  <script>
+  <script type="module">
+  import config from './js/config.js';
+  
   document.addEventListener("DOMContentLoaded", function () {
     async function getData() {
       try {
-        let response = await fetch("https://api.dfx.swiss/v1/deuro/info");
+        let response = await fetch(`${config.dfxApiBaseUrl}/v1/deuro/info`);
         if (!response.ok) throw new Error("Failed to fetch quote");
         return response.json();
       } catch (error) {

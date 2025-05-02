@@ -1,4 +1,4 @@
-name: Deploy to All-Inkl (Development)
+name: Deploy to All-Inkl
 
 on:
   push:
@@ -7,28 +7,15 @@ on:
 
 jobs:
   build-and-deploy:
-    name: Build and Deploy to All-Inkl
+    name: Deploy to All-Inkl
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-          
-      - name: Install dependencies
-        run: npm ci
-        
-      - name: Build project (Development)
-        run: npm run build:dev
-        
-      - name: Deploy to All-Inkl (Development)
+
+      - name: Deploy to All-Inkl
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.DEV_HOST }}
           username: ${{ secrets.DEV_USER }}
           password: ${{ secrets.DEV_PASSWORD }}
-          local-dir: ./dist/

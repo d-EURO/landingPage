@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Wed Apr 30 2025 09:30:27 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Wed May 07 2025 10:16:47 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="66f821decbc5c641c7050481" data-wf-site="66f821decbc5c641c7050485">
 <head>
   <meta charset="utf-8">
@@ -36,11 +36,12 @@ api_key: 'wg_b90707b33408651111250731dd46d8bc9'
 display: none!important;
 }
 </style>
-  <script>
+  <script type="module">
+  import config from './js/config.js';
   document.addEventListener("DOMContentLoaded", function () {
     async function getData() {
       try {
-        let response = await fetch("https://api.dfx.swiss/v1/deuro/info");
+        let response = await fetch(`${config.dfxApiBaseUrl}/v1/deuro/info`);
         if (!response.ok) throw new Error("Failed to fetch quote");
         return response.json();
       } catch (error) {
@@ -394,7 +395,7 @@ Webflow.push(function () {
               <div class="center">
                 <div class="sm-stronger">Swap other stablecoins for dEURO</div>
                 <a href="https://app.deuro.com/swap" target="_blank" class="link-block-8 w-inline-block">
-                  <div class="button-subtle-small"><img src="images/euro-stablecoins-img.svg" loading="lazy" width="Auto" height="Auto" alt="" class="vectors-wrapper-200"></div>
+                  <div class="button-subtle-small"><img src="images/euro-stablecoins-img.webp" loading="lazy" width="Auto" height="Auto" alt="" sizes="(max-width: 511px) 100vw, 511px" srcset="images/euro-stablecoins-img-p-500.webp 500w, images/euro-stablecoins-img.webp 511w" class="vectors-wrapper-200 stablecoins"></div>
                 </a>
               </div>
             </div>
@@ -841,7 +842,7 @@ Webflow.push(function () {
               <div class="center">
                 <div class="sm-stronger">Swap between dEURO and nDEPS </div>
                 <a href="https://app.deuro.com/equity" target="_blank" class="link-block-8 w-inline-block">
-                  <div class="button-subtle-small"><img src="images/swap-nDEPS.svg" loading="lazy" width="Auto" height="Auto" alt="" class="vectors-wrapper-200"></div>
+                  <div class="button-subtle-small"><img src="images/swap-nDEPS.svg" loading="lazy" width="Auto" height="Auto" alt="" class="vectors-wrapper-200 stablecoins"></div>
                 </a>
               </div>
             </div>

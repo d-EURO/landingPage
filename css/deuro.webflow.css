@@ -1559,15 +1559,11 @@
   justify-content: center;
   align-items: center;
   width: auto;
-  max-width: none;
+  max-width: 77%;
   height: auto;
   text-decoration: none;
   display: flex;
   overflow: visible;
-}
-
-.vectors-wrapper-200.stablecoins {
-  max-height: 32px;
 }
 
 .token-card {
@@ -5503,10 +5499,6 @@
 
   .body-2 {
     color: var(--frankencoin-pay---gray--60);
-  }
-
-  .vectors-wrapper-200.stablecoins {
-    max-height: 32px;
   }
 
   .hero-coin.fade-in-200ms {

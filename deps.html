@@ -61,7 +61,6 @@ display: none!important;
     }
   }
 
-  // Wait for config to load, then fetch and display data
   window.configReady.then(() => {
     getData().then((data) => {
       if (data) {

@@ -48,12 +48,8 @@ display: none!important;
 
   async function getData() {
     try {
-      const config = {
-        dfxApiBaseUrl: window.ENV_CONFIG?.DFX_API_URL || "https://api.dfx.swiss",
-        deuroApiBaseUrl: window.ENV_CONFIG?.DEURO_API_URL || "https://api.deuro.com"
-      };
-
-      let response = await fetch(`${config.dfxApiBaseUrl}/v1/deuro/info`);
+      const dfxApiBaseUrl = window.ENV_CONFIG?.DFX_API_URL || "https://api.dfx.swiss";
+      let response = await fetch(`${dfxApiBaseUrl}/v1/deuro/info`);
       if (!response.ok) throw new Error("Failed to fetch quote");
       return response.json();
     } catch (error) {

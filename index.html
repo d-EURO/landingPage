@@ -36,27 +36,35 @@ api_key: 'wg_b90707b33408651111250731dd46d8bc9'
 display: none!important;
 }
 </style>
-  <script type="module">
-  import config from './js/config.js';
-  document.addEventListener("DOMContentLoaded", function () {
-    async function getData() {
-      try {
-        let response = await fetch(`${config.dfxApiBaseUrl}/v1/deuro/info`);
-        if (!response.ok) throw new Error("Failed to fetch quote");
-        return response.json();
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
+  <script src="js/load-config.js"></script>
+  <script>
+  function formatAmount(amount) {
+    return amount.toFixed(2).replace(/\d{1,3}(?=(\d{3})+(?!\d))/g, "$&'")
+  }
+
+  function setContent(id, content) {
+    document.getElementById(id).textContent = content;
+  }
+
+  async function getData() {
+    try {
+      const config = {
+        dfxApiBaseUrl: window.ENV_CONFIG?.DFX_API_URL || "https://api.dfx.swiss",
+        deuroApiBaseUrl: window.ENV_CONFIG?.DEURO_API_URL || "https://api.deuro.com"
+      };
+
+      let response = await fetch(`${config.dfxApiBaseUrl}/v1/deuro/info`);
+      if (!response.ok) throw new Error("Failed to fetch quote");
+      return response.json();
+    } catch (error) {
+      console.error("Error fetching data:", error);
     }
-    function formatAmount(amount) {
-      return amount.toFixed(2).replace(/\d{1,3}(?=(\d{3})+(?!\d))/g, "$&'")
-    }
-    function setContent(id, content) {
-      document.getElementById(id).textContent = content;
-    }
+  }
+
+  window.configReady.then(() => {
     getData().then((data) => {
       if (data) {
-       setContent("zchfTotalSupply", formatAmount(data.totalSupplyDeuro ?? 0));
+        setContent("zchfTotalSupply", formatAmount(data.totalSupplyDeuro ?? 0));
         setContent("totalValueLocked", formatAmount(data.totalValueLockedInEur ?? 0));
         setContent("fpsMarketCap", formatAmount(data.depsMarketCapInEur ?? 0));
       }

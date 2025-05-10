@@ -1,4 +1,4 @@
-<!DOCTYPE html><!--  Last Published: Wed Apr 30 2025 09:30:27 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  Last Published: Wed May 07 2025 10:16:47 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="67d07cc646ab73ad5018ceb4" data-wf-site="66f821decbc5c641c7050485">
 <head>
   <meta charset="utf-8">
@@ -36,35 +36,6 @@ api_key: 'wg_b90707b33408651111250731dd46d8bc9'
 display: none!important;
 }
 </style>
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    async function getData() {
-      try {
-        let response = await fetch("https://api.dfx.swiss/v1/frankencoin/info");
-        if (!response.ok) throw new Error("Failed to fetch quote");
-        return response.json();
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    }
-    function formatAmount(amount) {
-      return amount.toFixed(2).replace(/\d{1,3}(?=(\d{3})+(?!\d))/g, "$&'")
-    }
-    function setContent(id, content) {
-      document.getElementById(id).textContent = content;
-    }
-    getData().then((data) => {
-      if (data) {
-        setContent("zchfTotalSupply", formatAmount(data.totalSupplyZchf ?? 0));
-        setContent("totalValueLocked", formatAmount(data.totalValueLockedInChf ?? 0));
-        setContent("fpsMarketCap", formatAmount(data.fpsMarketCapInChf ?? 0));
-        setContent("zchfTotalSupplyCurrency", "ZCHF");
-        setContent("totalValueLockedCurrency", "ZCHF");
-        setContent("fpsMarketCapCurrency", "ZCHF");
-      }
-    });
-  });
-</script>
 </head>
 <body>
   <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">

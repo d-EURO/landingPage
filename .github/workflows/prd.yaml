@@ -1,4 +1,4 @@
-name: Deploy to All-Inkl
+name: Deploy to All-Inkl (Production)
 
 on:
   push:
@@ -12,10 +12,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
-      - name: Deploy to All-Inkl
+      
+      - name: Deploy to All-Inkl (Production)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.PRD_HOST }}
           username: ${{ secrets.PRD_USER }}
           password: ${{ secrets.PRD_PASSWORD }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**

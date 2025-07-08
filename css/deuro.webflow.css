@@ -5325,10 +5325,10 @@
 .wg-dropdown.w--open {
   grid-column-gap: 2.7rem;
   grid-row-gap: 2.7rem;
-  box-shadow: 0 4px 10px 0 var(--gray-palette--15);
   margin-top: 0;
   padding: 1.5rem;
   inset: 2.3rem -1rem auto auto;
+  box-shadow: 0 4px 10px #00000012;
 }
 
 .weglot-switcher {
@@ -5460,7 +5460,6 @@
 .dropdown-list-2.w--open {
   border: 1px solid var(--gray-palette--15);
   background-color: var(--brand-colors--white);
-  box-shadow: 0 4px 10px 0 var(--gray-palette--15);
   -webkit-backdrop-filter: blur(200px);
   backdrop-filter: blur(200px);
   border-radius: .5rem;
@@ -5470,6 +5469,7 @@
   padding: 28px 20px;
   left: auto;
   right: -35.1172px;
+  box-shadow: 0 4px 10px #00000012;
 }
 
 .button-secondary-2 {

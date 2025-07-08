@@ -191,6 +191,7 @@
   --gray-palette--75: #5d647b;
   --gray-palette--85: #43495d;
   --brand-colors--glacier-white: #f5f6f9;
+  --gray-palette--7: #f0f1f5;
   --frankencoin-pay---black: black;
   --frankencoin-pay---button-corner-radius: 4px;
   --body-m: 16px;
@@ -212,7 +213,6 @@
   --gray-palette--100: #1d202a;
   --gray-palette--90: #363c4d;
   --gray-palette--40: #bdc1ce;
-  --gray-palette--7: #f0f1f5;
   --gray-palette--95: #272b38;
   --gray-palette--20: #dfe0e6;
   --gray-palette--30: #ced1da;
@@ -324,7 +324,8 @@
 
 .image {
   width: 100%;
-  max-width: 120px;
+  min-width: 116px;
+  max-width: 116px;
   height: 90%;
   max-height: none;
   display: inline-block;
@@ -341,8 +342,8 @@
 }
 
 .nav-right {
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
   flex-flow: row;
   flex: 0 auto;
   grid-template-rows: auto auto;
@@ -350,14 +351,14 @@
   grid-auto-columns: 1fr;
   justify-content: flex-end;
   align-items: center;
-  width: 50%;
+  width: 60%;
   display: flex;
 }
 
 .nav-left {
   justify-content: flex-start;
   align-items: center;
-  width: 50%;
+  width: 40%;
   height: auto;
   display: flex;
 }
@@ -463,6 +464,8 @@
 }
 
 .popover-ex {
+  grid-column-gap: .75rem;
+  grid-row-gap: .75rem;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -568,8 +571,8 @@
 }
 
 .link-block-3 {
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
@@ -603,8 +606,8 @@
 }
 
 .div-block-7 {
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -5235,8 +5238,8 @@
 }
 
 .spotlight_cards-wrapper {
-  grid-column-gap: 60px;
-  grid-row-gap: 60px;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
   justify-content: center;
   align-items: flex-start;
   display: flex;
@@ -5311,8 +5314,8 @@
 .wg-dropdown {
   grid-column-gap: 1.5rem;
   grid-row-gap: 1.5rem;
+  border: 1px solid var(--gray-palette--15);
   background-color: #fff;
-  border: 1px solid #eff0f3;
   border-radius: .5rem;
   flex-flow: column;
   margin-top: 4px;
@@ -5327,6 +5330,7 @@
   margin-top: 0;
   padding: 1.5rem;
   inset: 2.3rem -1rem auto auto;
+  box-shadow: 0 4px 10px #00000012;
 }
 
 .weglot-switcher {
@@ -5360,7 +5364,7 @@
   font-weight: 900;
 }
 
-.language {
+.buttons-hl {
   font-family: "Avenir Heavy 900", sans-serif;
   font-size: 1rem;
   font-weight: 900;
@@ -5391,8 +5395,8 @@
 }
 
 .wg-wrapper {
-  grid-column-gap: 1rem;
-  grid-row-gap: 1rem;
+  grid-column-gap: .75rem;
+  grid-row-gap: .75rem;
   flex-flow: column;
   display: flex;
 }
@@ -5412,9 +5416,211 @@
   display: none;
 }
 
+.button-app-store {
+  grid-column-gap: 10px;
+  border: 1px solid var(--frankencoin-pay---brand-colors--anthracite);
+  background-color: #0000;
+  border-radius: 30px;
+  flex: 0 auto;
+  justify-content: center;
+  align-items: center;
+  min-width: 68px;
+  height: 35px;
+  padding: 0;
+  text-decoration: none;
+  transition: background-color .2s;
+  display: none;
+}
+
+.button-app-store:hover {
+  background-color: var(--gray-palette--7);
+}
+
+.app-store {
+  font-family: var(--frankencoin-pay---font--body-2-desktop);
+  color: var(--frankencoin-pay---brand-colors--anthracite);
+  font-size: var(--frankencoin-pay---font-size--body-2-desktop);
+  line-height: var(--frankencoin-pay---line-height--body-2-desktop);
+  text-transform: none;
+  flex: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.row-23 {
+  grid-column-gap: 16px;
+  flex: 0 auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 280px;
+  text-decoration: none;
+  display: flex;
+}
+
+.dropdown-list-2.w--open {
+  border: 1px solid var(--gray-palette--15);
+  background-color: var(--brand-colors--white);
+  -webkit-backdrop-filter: blur(200px);
+  backdrop-filter: blur(200px);
+  border-radius: .5rem;
+  width: auto;
+  height: auto;
+  margin-top: 10px;
+  padding: 1.5rem;
+  left: auto;
+  right: -35.1172px;
+  box-shadow: 0 4px 10px #00000012;
+}
+
+.button-secondary-2 {
+  grid-column-gap: 10px;
+  background-color: #0000;
+  border: 1px solid #333e4c;
+  border-radius: 8px;
+  flex: 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  padding: 0;
+  text-decoration: none;
+  transition: background-color .2s;
+  display: flex;
+}
+
+.button-secondary-2:hover {
+  background-color: var(--gray-palette--15);
+}
+
+.icons-4 {
+  grid-column-gap: 6px;
+  grid-row-gap: 6px;
+  flex: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+}
+
+.text-72 {
+  color: var(--brand-colors--anthracite);
+  text-transform: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Avenir Book 400", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.vectors-wrapper-1520 {
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+  width: 13.0173px;
+  height: 16px;
+  text-decoration: none;
+  display: flex;
+}
+
+.frame-427322507 {
+  grid-row-gap: 12px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-decoration: none;
+  display: flex;
+}
+
+.vectors-wrapper-70 {
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  text-decoration: none;
+  display: flex;
+}
+
+.div-block-2 {
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-content: center;
+  padding-right: 32px;
+  display: flex;
+}
+
+.text-block-8 {
+  color: #d9dbe9;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.icon-17 {
+  color: var(--brand-colors--titan-gray-60);
+}
+
+.link-block-2 {
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: flex;
+}
+
+.dropdown-3 {
+  flex-flow: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+  display: block;
+}
+
+.button-secondary {
+  grid-column-gap: 8px;
+  border: 1px solid var(--frankencoin-pay---brand-colors--anthracite);
+  background-color: #0000;
+  border-radius: 30px;
+  flex: 0 auto;
+  justify-content: center;
+  align-items: center;
+  min-width: 90px;
+  height: 35px;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .2s;
+  display: flex;
+}
+
+.button-secondary:hover {
+  background-color: var(--gray-palette--7);
+}
+
 @media screen and (min-width: 1440px) {
+  .image {
+    min-width: 80px;
+  }
+
+  .nav-right {
+    width: 54%;
+  }
+
   .nav-left {
     width: 50%;
+  }
+
+  .popover-ex {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 0;
   }
 
   .dropdown-list-3.w--open {
@@ -5785,6 +5991,45 @@
     grid-column-gap: 80px;
     grid-row-gap: 80px;
   }
+
+  .dropdown-list-2.w--open {
+    border: 1px solid var(--gray-palette--15);
+    background-color: var(--brand-colors--white);
+    box-shadow: 0 4px 10px 0 var(--gray-palette--15);
+    opacity: 1;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
+    border-radius: .5rem;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10px;
+    padding: 28px 20px;
+    display: flex;
+  }
+
+  .button-secondary-2 {
+    background-color: #0000;
+  }
+
+  .button-secondary-2:hover {
+    background-color: var(--gray-palette--5);
+  }
+
+  .text-72 {
+    color: var(--brand-colors--anthracite);
+    font-family: "Avenir Book 400", sans-serif;
+    font-weight: 400;
+  }
+
+  .frame-427322507 {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .button-secondary:hover {
+    background-color: var(--gray-palette--7);
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -5846,6 +6091,10 @@
 
   .button-outline-2 {
     border-color: var(--frankencoin-pay---brand-colorccs--titan-gray);
+  }
+
+  .frame-427322508.mobile {
+    display: none;
   }
 
   .container {
@@ -6427,6 +6676,19 @@
   .wg-dropdown_arrow {
     display: none;
   }
+
+  .button-app-store {
+    border-color: var(--frankencoin-pay---brand-colorccs--titan-gray);
+    display: none;
+  }
+
+  .dropdown-list-2.w--open {
+    margin-top: 42px;
+  }
+
+  .dropdown-3 {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -6461,6 +6723,7 @@
   }
 
   .frame-427322508.mobile {
+    grid-row-gap: 20px;
     display: flex;
   }
 
@@ -6602,6 +6865,10 @@
     grid-column-gap: 30px;
     grid-row-gap: 30px;
   }
+
+  .dropdown-3 {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -6635,6 +6902,8 @@
   }
 
   .nav-menu-2 {
+    grid-column-gap: .75rem;
+    grid-row-gap: .75rem;
     background-color: #f7f7f9;
     flex: none;
     width: 100%;
@@ -6650,7 +6919,7 @@
   }
 
   .nav-link-2 {
-    margin-bottom: 32px;
+    margin-bottom: 1rem;
     padding: 0;
   }
 
@@ -6663,6 +6932,8 @@
   }
 
   .frame-427322438._2 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     display: block;
   }
 
@@ -6695,8 +6966,13 @@
     display: block;
   }
 
+  .button-outline-2 {
+    border-radius: 20px;
+  }
+
   .frame-427322508.mobile {
-    grid-row-gap: 10px;
+    grid-row-gap: 1rem;
+    margin-bottom: 20px;
   }
 
   .container {
@@ -8066,6 +8342,10 @@
     justify-content: space-between;
     display: flex;
     position: relative;
+  }
+
+  .dropdown-3 {
+    display: none;
   }
 }
 

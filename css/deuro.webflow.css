@@ -1234,7 +1234,7 @@
   align-items: flex-start;
   width: 100%;
   height: auto;
-  min-height: 440px;
+  min-height: 460px;
   margin-bottom: 0;
   padding: 36px 36px 48px;
   text-decoration: none;
@@ -2760,7 +2760,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  width: 80%;
   max-width: none;
   text-decoration: none;
   display: flex;
@@ -4426,7 +4426,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 75%;
+  width: 78%;
   text-decoration: none;
   display: flex;
 }
@@ -7227,7 +7227,7 @@
   .large-title {
     font-family: var(--frankencoin-pay---font--large-title-mobile);
     font-size: var(--frankencoin-pay---font-size--large-title-mobile);
-    text-align: left;
+    text-align: center;
     max-width: 330px;
   }
 
@@ -7294,7 +7294,7 @@
 
   .section-headline {
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 0;
   }
 
@@ -8292,7 +8292,17 @@
     flex: 1;
   }
 
-  .bug-bounty-img, .tbd-block, .pool-bank-block, .swap-stables-block {
+  .bug-bounty-img, .tbd-block {
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+  .caption-deuro {
+    text-align: center;
+  }
+
+  .pool-bank-block, .swap-stables-block {
     justify-content: flex-start;
     align-items: center;
     width: 100%;

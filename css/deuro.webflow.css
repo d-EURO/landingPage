@@ -324,10 +324,10 @@
 
 .image {
   width: 100%;
-  min-width: 116px;
-  max-width: 116px;
-  height: 90%;
-  max-height: none;
+  min-width: auto;
+  max-width: 98px;
+  height: 100%;
+  max-height: 32px;
   display: inline-block;
 }
 
@@ -6891,6 +6891,7 @@
 
   .image {
     width: auto;
+    min-width: auto;
     max-width: 200px;
     height: 30px;
   }

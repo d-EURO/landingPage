@@ -4364,6 +4364,10 @@
   display: grid;
 }
 
+.coin-wrapper._1line {
+  grid-template-rows: auto;
+}
+
 .grid-vs-logo {
   width: 38px;
   height: 38px;
@@ -4388,6 +4392,7 @@
 
 .coin-subheader {
   color: var(--brand-colors--titan-gray-60);
+  display: block;
 }
 
 .grid-vs-icon {

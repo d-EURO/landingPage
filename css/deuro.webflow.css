@@ -141,6 +141,7 @@
   --frankencoin-pay---line-height--body-1-desktop: 27px;
   --frankencoin-pay---line-height--body-1-mobile: 26px;
   --frankencoin-pay---gray--80: #4f566e;
+  --body-m-light: "Avenir Light 300", sans-serif;
   --frankencoin-pay---brand-colors--white: white;
   --gray-palette--70: #6b738e;
   --frankencoin-pay---font-size--body-2-stronger-desktop: 16px;
@@ -170,7 +171,6 @@
   --frankencoin-pay---line-height--titel-1-mobile: 34px;
   --frankencoin-pay---line-height--display-mobile: 46px;
   --spacing--2: 8px;
-  --body-m-light: "Avenir Light 300", sans-serif;
   --body-l-light: "Avenir Light 300", sans-serif;
   --gray-palette--10: #eaebf0;
   --gray-palette--3: #f9fafc;
@@ -1279,8 +1279,10 @@
 }
 
 .body-xl.text-color-white {
+  font-family: var(--body-m-light);
   color: var(--frankencoin-pay---brand-colors--white);
   text-align: center;
+  font-weight: 300;
 }
 
 .body-xl.text-align-center {
@@ -8432,14 +8434,6 @@
 }
 
 #w-node-ecd1d779-fd07-040c-3184-d3a165ea5fe4-8ccf9845 {
-  grid-area: span 1 / span 2 / span 1 / span 2;
-}
-
-#w-node-_680e0ae0-dcb2-7e10-fb7d-2412f382e8db-8ccf9845 {
-  grid-area: span 1 / span 1 / span 1 / span 1;
-}
-
-#w-node-_680e0ae0-dcb2-7e10-fb7d-2412f382e8dd-8ccf9845 {
   grid-area: span 1 / span 2 / span 1 / span 2;
 }
 

@@ -47,9 +47,9 @@ display: none!important;
   }
   async function getData() {
     try {
-      const dfxApiBaseUrl = window.ENV_CONFIG?.DFX_API_URL || "https://api.dfx.swiss";
-      let response = await fetch(`${dfxApiBaseUrl}/v1/deuro/info`);
-      if (!response.ok) throw new Error("Failed to fetch quote");
+      const deuroApiBaseUrl = window.ENV_CONFIG?.DEURO_API_URL || "https://api.deuro.com";
+      let response = await fetch(`${deuroApiBaseUrl}/ecosystem/stablecoin/info`);
+      if (!response.ok) throw new Error("Failed to fetch data");
       return response.json();
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -58,9 +58,9 @@ display: none!important;
   window.configReady.then(() => {
     getData().then((data) => {
       if (data) {
-        setContent("zchfTotalSupply", formatAmount(data.totalSupplyDeuro ?? 0));
-        setContent("totalValueLocked", formatAmount(data.totalValueLockedInEur ?? 0));
-        setContent("fpsMarketCap", formatAmount(data.depsMarketCapInEur ?? 0));
+        setContent("zchfTotalSupply", formatAmount(data.total.supply ?? 0));
+        setContent("totalValueLocked", formatAmount((data.tvl.eur ?? 0) + (data.total.supply ?? 0)));
+        setContent("fpsMarketCap", formatAmount(data.deps.depsMarketCapInChf ?? 0));
       }
     });
   });

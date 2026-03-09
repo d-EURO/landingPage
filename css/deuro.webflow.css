@@ -5038,13 +5038,7 @@
   display: grid;
 }
 
-.bug-bounty-img {
-  flex: 0 auto;
-  justify-content: center;
-  align-items: center;
-  width: 35%;
-  display: flex;
-}
+
 
 .h3 {
   font-family: var(--frankencoin-pay---font--title-1-desktop);
@@ -8300,7 +8294,7 @@
     flex: 1;
   }
 
-  .bug-bounty-img, .tbd-block {
+  .tbd-block {
     justify-content: flex-start;
     align-items: center;
     width: 100%;

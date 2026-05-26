@@ -1,25 +1,41 @@
-name: Deploy to All-Inkl (Production)
+name: Deploy main to Cloudflare Pages
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  deployments: write
+
+concurrency:
+  group: prd-deploy
+  cancel-in-progress: true
+
 jobs:
-  build-and-deploy:
-    name: Deploy to All-Inkl
+  deploy:
+    name: wrangler pages deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      
-      - name: Deploy to All-Inkl (Production)
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          server: ${{ secrets.PRD_HOST }}
-          username: ${{ secrets.PRD_USER }}
-          password: ${{ secrets.PRD_PASSWORD }}
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
+          node-version: "22"
+
+      - name: Install Wrangler
+        run: npm install -g wrangler@4
+
+      - name: Deploy to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          wrangler pages deploy . \
+            --project-name=deuro-landing-page-prd \
+            --branch=main \
+            --commit-hash=${{ github.sha }} \
+            --commit-message="${{ github.event.head_commit.message }}"
